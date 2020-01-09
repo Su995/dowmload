@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>翼安全</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<script>
+    var versionNum; //TODO 版本号 根据APP更新情况及时调整参数
+    var appSize; //TODO 文件大小  根据APP更新情况及时调整参数
+    if(!this.ipod && !this.ipad && navigator.userAgent.match(/(iPhone\sOS)\s([\d_]+)/i)){
+        versionNum = '1.0.1';//todo ios版本号与APP大小
+        appSize = '38.7 MB';
+    }else{
+        versionNum = '1.0.0';//todo 安卓版本号与APP大小
+        appSize = '17.37MB';
+    }
+</script>
+<body>
+<!--todo 默认使用安卓样式以及安卓下载地址 -->
+<p id="openInWx" class="hide">点击右上角按钮在浏览器中打开<img src="images/alert_arrow.png" alt=""></p>
+<div class="show" id="container">
+    <div id="headerImg"></div>
+    <div class="main">
+        <header class="openInWx hide">点击右上角按钮在浏览器中打开</header>
+        <div class="content">
+            <p class="logo">
+                <img src="images/invokeHazard/loginLogo.png" alt="logo" style="width: auto;height: auto;">
+            </p>
+            <p class="title" style="margin-bottom: 1rem;"><img src="images/android_1.png" alt="">翼安全</p>
+            <p class="versionNumber">版本 : <span id="version_Num">1.0.0</span>&nbsp;&nbsp;&nbsp;  大小 : <span id="appSize">17.37MB</span></p>
+
+            <div class="openBtn">
+                <div class="downloadPic"><img src="images/invokeHazard/invokeHazard_download.png" alt=""></div>
+
+                <button style="background: #84bfb4;border: 1px solid #579c8f;"><a href="thinkeriviewhazard:" id="openApp">打开APP</a></button>
+                <button><a id="install" href="http://iview.1link.com.cn:9090/appStore/iViewHazard.apk">下载APP</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/index.js"></script>
+<script>
+    window.onload = function () {
+        var scheme = "thinkeriviewhazard:";
+        var titleImg = document.getElementsByClassName("title")[0].children[0];
+        var install = document.getElementById("install");
+        var iosUrl = 'https://apps.apple.com/cn/app/%E7%BF%BC%E5%AE%89%E5%85%A8/id1492920081?l=en';
+        var androidUrl = 'http://iview.1link.com.cn:9090/appStore/iViewHazard.apk';
+        http://iview.1link.com.cn:9090/invoke-app/invokeHazard.html
+            if(validationTerminal().ipad || validationTerminal().iphone){
+                titleImg.src = "images/apple_1.png";
+                install.href = iosUrl;//给安装按钮设置跳转地址为itunes地址
+            }
+        document.getElementById('version_Num').innerHTML = versionNum;
+        document.getElementById('appSize').innerHTML = appSize;
+        skip(scheme,iosUrl,androidUrl);
+    }
+
+</script>
+</html>

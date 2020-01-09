@@ -1,0 +1,129 @@
+body,html{
+    margin:0;
+    padding: 0;
+    max-width: 1024px;
+    font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei","Open Sans","Helvetica Neue",Arial,sans-serif;
+}
+ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.hide{display:none;}
+.show{display: block;}
+.main{
+    width:100%;
+    position: absolute;
+    top:10vh;
+}
+#headerImg{
+    background: url("../images/thinkerLogo.png") no-repeat scroll top center ;
+    width:94%;
+    max-width: 1024px;
+    height: 45px;
+    height:5.5vh;
+    background-size: 100% 100%;
+    text-align: center;
+    margin:0 auto;
+    margin-top: 10px;
+}
+#headerImg_RJ{
+    background: url("../images/RJLogo.png") no-repeat;
+    width:22.5vh;
+    max-width: 1024px;
+    height:8.1vh;
+    background-size: 100% 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 5vh;
+}
+#openInWx{
+    margin:0 auto;
+    text-align: center;
+    background: #343434;
+    font-size: 1.3rem;
+    color: #777;
+    padding: 3% 0;
+}
+.logo{
+    width: 140px;
+    height:140px;
+    margin: 5px auto;
+    text-align: center;
+    background-image: url("../images/app_bg.png");
+    background-repeat:no-repeat;
+    background-size: 100% auto;
+}
+
+.logo img{
+    width:80px;
+    height:80px;
+    margin-top:30px;
+    border:0;
+}
+.title img,#openInWx img{
+    width: 20px;
+    height: 20px;
+    padding-right: 0.5rem;
+}
+.versionNumber{
+    color: #969b9d;
+    text-align: center;
+    font-size: 14px;
+}
+.openBtn,.title{
+    margin:0 auto;
+    text-align: center;
+    width:100%;
+    font-size: 1.4rem;
+}
+.openBtn{
+    width: 200px;
+}
+.downloadPic{
+    width:100px;
+    height:130px;
+    margin:0 auto;
+}
+.downloadPic img{
+    width:100px;
+    height:100px;
+    border: 1px solid #c2c2c2;
+    padding: 3px;
+}
+.downloadPic p{
+    margin:0;
+    padding:0;
+    color:#969b9d;
+    font-size:14px;
+}
+.openBtn button{
+    width:100%;
+    margin-bottom:5%;
+    text-align: center;
+    border:1px solid #2bad95;
+    outline: none;
+    font-size: 1.125rem;
+    padding:8px 2.8rem;
+    background-color: #28caad;
+    border-radius: 30px;
+    display: block;
+}
+@media (max-width:320px) {
+    .openBtn button{
+        padding:8px 40px;
+    }
+    .logo img{
+        width:80px;
+        height:80px;
+    }
+}
+.openBtn button a{
+    width:100%;
+    height:100%;
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size:18px;
+    outline:none;
+}
