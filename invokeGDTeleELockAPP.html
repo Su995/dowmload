@@ -55,15 +55,15 @@
         document.getElementById('appSize').innerHTML = appSize;
         // skip(scheme,"",androidUrl);
         if(validationTerminal().ipad || validationTerminal().iphone){
-            // titleImg.src = "images/apple_1.png";
-            // install.href = iosUrl;//给安装按钮设置跳转地址为itunes地址
-            alert("本APP目前仅支持安卓系统手机用户下载");
+            titleImg.src = "images/apple_1.png";
+            install.href = iosUrl;//给安装按钮设置跳转地址为itunes地址
+            /*alert("本APP目前仅支持安卓系统手机用户下载");
             document.getElementById("install").onclick=function () {
                 alert("本APP目前仅支持安卓系统手机用户下载");
-            }
+            }*/
         }else{
             document.getElementById("install").href="http://iview.1link.com.cn:9090/appStore/iViewApp_MJ.apk";
-            skip(scheme,"",androidUrl);
+            skip(scheme,iosUrl,androidUrl);
         }
     }
 
